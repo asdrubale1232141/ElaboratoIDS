@@ -13,26 +13,25 @@
 3. Utilizza lo zoom del browser per ingrandire le sezioni che interessano  
     -Se non dovesse zoomare tramite touchpad provare 'CTRL' + '+'  oppure 'CTRL' + '-'  (cmd per macOS).
 
-# Legenda dei caratteri che potrebbero non essere usuali
-## 🧭 Legenda Visiva – Diagramma UML
+## Legenda dei caratteri che potrebbero non essere usuali
 
-### 🔐 Attributi
+###  Attributi
 
 | Simbolo Visivo                        | Significato            |
 |----------------------------------------|-------------------------|
-| 🔲 Quadro con bordo rosso              | Attributo privato       |
-| 🔶 Rombo giallo                        | Attributo protetto      |
-| `_nome`                                | Attributo statico       |
+|  Quadrato vuoto con bordo rosso              | Attributo privato       |
+|  Rombo giallo                        | Attributo protetto      |
+|  'underscore'nome                                | Attributo statico       |
 
-### ⚙️ Metodi
+###  Metodi
 
 | Simbolo Visivo                        | Significato              |
 |----------------------------------------|---------------------------|
-| 🟢 Cerchio verde                       | Metodo pubblico           |
-| 🟥 Quadrato rosso pieno               | Metodo privato            |
-| `_nomeMetodo()`                        | Metodo statico            |
-| `{synchronized} nomeMetodo()`          | Metodo sincronizzato      |
+|  Cerchio verde                       | Metodo pubblico           |
+|  Quadrato rosso pieno               | Metodo privato            |
+|  'underscore'nomeMetodo()                        | Metodo statico            |
+| ' {synchronized}'nomeMetodo()         | Metodo synchronized      |
 
-> ℹ️ **Nota**: l'underscore `_` prima del nome indica statico, sia per metodi che per attributi.
-
+# Nota UML
+Alcuni metodi costruttori delle classi TipoVisita e Visita risultano mal formattati e si riversano negli attributi. Questo è dovuto alla gran quantità di parametri. Di seguito quello che dovrebbero essere
  
