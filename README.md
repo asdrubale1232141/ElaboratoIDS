@@ -14,4 +14,25 @@
     -Se non dovesse zoomare tramite touchpad provare 'CTRL' + '+'  oppure 'CTRL' + '-'  (cmd per macOS).
 
 # Legenda dei caratteri che potrebbero non essere usuali
+## 🧭 Legenda Visiva – Diagramma UML
+
+### 🔐 Attributi
+
+| Simbolo Visivo                        | Significato            |
+|----------------------------------------|-------------------------|
+| 🔲 Quadro con bordo rosso              | Attributo privato       |
+| 🔶 Rombo giallo                        | Attributo protetto      |
+| `_nome`                                | Attributo statico       |
+
+### ⚙️ Metodi
+
+| Simbolo Visivo                        | Significato              |
+|----------------------------------------|---------------------------|
+| 🟢 Cerchio verde                       | Metodo pubblico           |
+| 🟥 Quadrato rosso pieno               | Metodo privato            |
+| `_nomeMetodo()`                        | Metodo statico            |
+| `{synchronized} nomeMetodo()`          | Metodo sincronizzato      |
+
+> ℹ️ **Nota**: l'underscore `_` prima del nome indica statico, sia per metodi che per attributi.
+
  
