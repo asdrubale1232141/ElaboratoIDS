@@ -35,9 +35,9 @@
 # Nota UML
 Alcuni metodi costruttori delle classi TipoVisita e Visita risultano mal formattati e si riversano negli attributi. Questo è dovuto alla gran quantità di parametri. Di seguito quello che dovrebbero essere
 
-// =========================
-// 🧪 Versione 1
-// =========================
+### Versione 1
+```java
+
 
 class Visita {
     public Visita(String titolo, String descrizione, String keyPoint, MonthDay dataInizio,
@@ -56,11 +56,9 @@ class TipoVisita {
                       LocalTime oraInizio, Duration durata, boolean serveBiglietto,
                       int minPartecipanti, int maxPartecipanti) {}
 }
-
-// =========================
-// 🧪 Versione 2
-// =========================
-
+```
+### Versione 2
+```java
 class Visita {
     public Visita(String titolo, String descrizione, String keyPoint, MonthDay dataInizio,
                   MonthDay dataFine, Set<DayOfWeek> giorniSettimana, LocalTime oraInizio,
@@ -80,11 +78,9 @@ class TipoVisita {
                       LocalTime oraInizio, Duration durata, boolean serveBiglietto,
                       int minPartecipanti, int maxPartecipanti) {}
 }
-
-// =========================
-// 🧪 Versione 3
-// =========================
-
+```
+### Versione 3
+```java
 class Visita {
     public Visita(String titolo, String descrizione, String keyPoint, MonthDay dataInizio,
                   MonthDay dataFine, Set<DayOfWeek> giorniSettimana, LocalTime oraInizio,
@@ -104,11 +100,9 @@ class TipoVisita {
                       LocalTime oraInizio, Duration durata, boolean serveBiglietto,
                       int minPartecipanti, int maxPartecipanti) {}
 }
-
-// =========================
-// 🧪 Versione 4
-// =========================
-
+```
+### Versione 4
+```java
 class Visita {
     public Visita(String titolo, String descrizione, String keyPoint, MonthDay dataInizio,
                   MonthDay dataFine, Set<DayOfWeek> giorniSettimana, LocalTime oraInizio,
@@ -128,3 +122,4 @@ class TipoVisita {
                       LocalTime oraInizio, Duration durata, boolean serveBiglietto,
                       int minPartecipanti, int maxPartecipanti) {}
 }
+```
