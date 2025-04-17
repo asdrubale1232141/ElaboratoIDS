@@ -35,61 +35,96 @@
 # Nota UML
 Alcuni metodi costruttori delle classi TipoVisita e Visita risultano mal formattati e si riversano negli attributi. Questo è dovuto alla gran quantità di parametri. Di seguito quello che dovrebbero essere
 
-#### Versione 1
+// =========================
+// 🧪 Versione 1
+// =========================
 
-**Classe `Visita`**
+class Visita {
+    public Visita(String titolo, String descrizione, String keyPoint, MonthDay dataInizio,
+                  MonthDay dataFine, Set<DayOfWeek> giorniSettimana, LocalTime oraInizio,
+                  Duration durata, boolean serveBiglietto, int minPartecipanti, int maxPartecipanti) {}
 
-```java
-public Visita(titolo: String, descrizione: String, keyPoint: String, dataInizio: MonthDay,
-              dataFine: MonthDay, giorniSettimana: Set<DayOfWeek>, oraInizio: LocalTime,
-              durata: Duration, serveBiglietto: boolean, minPartecipanti: int, maxPartecipanti: int)
+    public Visita(String titolo, String descrizione, String keyPoint, MonthDay dataInizio,
+                  MonthDay dataFine, Set<DayOfWeek> giorniSettimana, LocalTime oraInizio,
+                  Duration durata, boolean serveBiglietto, int minPartecipanti, int maxPartecipanti,
+                  LocalDate data, StatoVisita stato) {}
+}
 
-public Visita(titolo: String, descrizione: String, keyPoint: String, dataInizio: MonthDay,
-              dataFine: MonthDay, giorniSettimana: Set<DayOfWeek>, oraInizio: LocalTime,
-              durata: Duration, serveBiglietto: boolean, minPartecipanti: int, maxPartecipanti: int,
-              data: LocalDate, stato: StatoVisita)
+class TipoVisita {
+    public TipoVisita(String titolo, String descrizione, String puntoRitrovo,
+                      MonthDay dataInizio, MonthDay dataFine, Set<DayOfWeek> giorniSettimana,
+                      LocalTime oraInizio, Duration durata, boolean serveBiglietto,
+                      int minPartecipanti, int maxPartecipanti) {}
+}
 
- #### Versione 2
- Classe Visita:
-   public Visita(titolo: String, descrizione: String, keyPoint: String, dataInizio: MonthDay,
-           dataFine: MonthDay, giorniSettimana: Set<DayOfWeek>, oraInizio: LocalTime, durata: Duration, serveBiglietto: 
-           boolean, minPartecipanti: int, maxPartecipanti: int)
-   public Visita(titolo: String, descrizione: String, keyPoint: String, dataInizio: MonthDay,
-           dataFine: MonthDay, giorniSettimana: Set<DayOfWeek>, oraInizio: LocalTime, durata: Duration, serveBiglietto:
-           boolean, minPartecipanti: int, maxPartecipanti: int, data: LocalDate, stato: StatoVisita)
-   public Visita(tv: TipoVisita, data: LocalDate)
-   
- Classe TipoVisita:
-   public TipoVisita(titolo: String, descrizione: String, puntoRitrovo: String,
-              dataInizio: MonthDay, dataFine: MonthDay, giorniSettimana: Set<DayOfWeek>, oraInizio: LocalTime,
-              durata: Duration, serveBiglietto: boolean, minPartecipanti: int, maxPartecipanti: int)
-              
- #### Versione 3
- Classe Visita
-  public Visita(titolo: String, descrizione: String, keyPoint: String, dataInizio: MonthDay,
-           dataFine: MonthDay, giorniSettimana: Set<DayOfWeek>, oraInizio: LocalTime, durata: Duration, serveBiglietto: 
-           boolean, minPartecipanti: int, maxPartecipanti: int)
-   public Visita(titolo: String, descrizione: String, keyPoint: String, dataInizio: MonthDay, 
-           dataFine: MonthDay, giorniSettimana: Set<DayOfWeek>, oraInizio: LocalTime, durata: Duration, serveBiglietto: 
-           boolean, minPartecipanti: int, maxPartecipanti: int, data: LocalDate, stato: StatoVisita, nIscritti: int, volontario: Volontario)
-   publicVisita(tv: TipoVisita, data: LocalDate, volontario: Volontario)
-              
- Classe TipoVisita
-   public TipoVisita(titolo: String, descrizione: String, puntoRitrovo: String,
-              dataInizio: MonthDay, dataFine: MonthDay, giorniSettimana: Set<DayOfWeek>, oraInizio: LocalTime,
-              durata: Duration, serveBiglietto: boolean, minPartecipanti: int, maxPartecipanti: int)
-              
- #### Versione 4
- Classe Visita
-   public Visita(titolo: String, descrizione: String, keyPoint: String, dataInizio: MonthDay, 
-           dataFine: MonthDay, giorniSettimana: Set<DayOfWeek>, oraInizio: LocalTime, durata: Duration, serveBiglietto: 
-           boolean, minPartecipanti: int, maxPartecipanti: int)
-   public Visita(titolo: String, descrizione: String, keyPoint: String, dataInizio: MonthDay, 
-           dataFine: MonthDay, giorniSettimana: Set<DayOfWeek>, oraInizio: LocalTime, durata: Duration, serveBiglietto: 
-           boolean, minPartecipanti: int, maxPartecipanti: int, data: LocalDate, stato: StatoVisita, nIscritti: int, volontario: Volontario)
-   public Visita(tv: TipoVisita, data: LocalDate, volontario: Volontario)
-   
- Classe TipoVisita
-   public TipoVisita(titolo: String, descrizione: String, puntoRitrovo: String,
-              dataInizio: MonthDay, dataFine: MonthDay, giorniSettimana: Set<DayOfWeek>, oraInizio: LocalTime,
-              durata: Duration, serveBiglietto: boolean, minPartecipanti: int, maxPartecipanti: int)
+// =========================
+// 🧪 Versione 2
+// =========================
+
+class Visita {
+    public Visita(String titolo, String descrizione, String keyPoint, MonthDay dataInizio,
+                  MonthDay dataFine, Set<DayOfWeek> giorniSettimana, LocalTime oraInizio,
+                  Duration durata, boolean serveBiglietto, int minPartecipanti, int maxPartecipanti) {}
+
+    public Visita(String titolo, String descrizione, String keyPoint, MonthDay dataInizio,
+                  MonthDay dataFine, Set<DayOfWeek> giorniSettimana, LocalTime oraInizio,
+                  Duration durata, boolean serveBiglietto, int minPartecipanti, int maxPartecipanti,
+                  LocalDate data, StatoVisita stato) {}
+
+    public Visita(TipoVisita tv, LocalDate data) {}
+}
+
+class TipoVisita {
+    public TipoVisita(String titolo, String descrizione, String puntoRitrovo,
+                      MonthDay dataInizio, MonthDay dataFine, Set<DayOfWeek> giorniSettimana,
+                      LocalTime oraInizio, Duration durata, boolean serveBiglietto,
+                      int minPartecipanti, int maxPartecipanti) {}
+}
+
+// =========================
+// 🧪 Versione 3
+// =========================
+
+class Visita {
+    public Visita(String titolo, String descrizione, String keyPoint, MonthDay dataInizio,
+                  MonthDay dataFine, Set<DayOfWeek> giorniSettimana, LocalTime oraInizio,
+                  Duration durata, boolean serveBiglietto, int minPartecipanti, int maxPartecipanti) {}
+
+    public Visita(String titolo, String descrizione, String keyPoint, MonthDay dataInizio,
+                  MonthDay dataFine, Set<DayOfWeek> giorniSettimana, LocalTime oraInizio,
+                  Duration durata, boolean serveBiglietto, int minPartecipanti, int maxPartecipanti,
+                  LocalDate data, StatoVisita stato, int nIscritti, Volontario volontario) {}
+
+    public Visita(TipoVisita tv, LocalDate data, Volontario volontario) {}
+}
+
+class TipoVisita {
+    public TipoVisita(String titolo, String descrizione, String puntoRitrovo,
+                      MonthDay dataInizio, MonthDay dataFine, Set<DayOfWeek> giorniSettimana,
+                      LocalTime oraInizio, Duration durata, boolean serveBiglietto,
+                      int minPartecipanti, int maxPartecipanti) {}
+}
+
+// =========================
+// 🧪 Versione 4
+// =========================
+
+class Visita {
+    public Visita(String titolo, String descrizione, String keyPoint, MonthDay dataInizio,
+                  MonthDay dataFine, Set<DayOfWeek> giorniSettimana, LocalTime oraInizio,
+                  Duration durata, boolean serveBiglietto, int minPartecipanti, int maxPartecipanti) {}
+
+    public Visita(String titolo, String descrizione, String keyPoint, MonthDay dataInizio,
+                  MonthDay dataFine, Set<DayOfWeek> giorniSettimana, LocalTime oraInizio,
+                  Duration durata, boolean serveBiglietto, int minPartecipanti, int maxPartecipanti,
+                  LocalDate data, StatoVisita stato, int nIscritti, Volontario volontario) {}
+
+    public Visita(TipoVisita tv, LocalDate data, Volontario volontario) {}
+}
+
+class TipoVisita {
+    public TipoVisita(String titolo, String descrizione, String puntoRitrovo,
+                      MonthDay dataInizio, MonthDay dataFine, Set<DayOfWeek> giorniSettimana,
+                      LocalTime oraInizio, Duration durata, boolean serveBiglietto,
+                      int minPartecipanti, int maxPartecipanti) {}
+}
