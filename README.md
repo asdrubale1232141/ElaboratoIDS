@@ -37,7 +37,6 @@ Alcuni metodi costruttori delle classi TipoVisita e Visita risultano mal formatt
 
 ### Versione 1
 ```java
-// ===== Versione 1 =====
 
 class Visita {
     public Visita(String titolo, String descrizione, String keyPoint, MonthDay dataInizio,
